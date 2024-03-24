@@ -53,10 +53,10 @@ def plot_bboxes(image, boxes, labels=[], colors=[], score=True, conf=None):
         if conf:
             if box[-2] > conf:
                 color = colors[int(box[-1])]
-                box_label(image, box, label, color)
+                box_label(image, box, '', color)
         else:
             color = colors[int(box[-1])]
-            box_label(image, box, label, color)
+            box_label(image, box, '', color)
 
 
 def predict_disease_boxes(img_path, outdirPath):
@@ -69,6 +69,6 @@ def predict_disease_boxes(img_path, outdirPath):
 
 
 if __name__ == "__main__":
-    img_path = "Tests_images/apple_black_rot.jpeg"
-    outdirPath = "Tests_images/apple_black_rot___testOUT.jpeg"
+    img_path = "Tests_images/test.jpeg"
+    outdirPath = "Tests_images/test___testOUT.jpeg"
     predict_disease_boxes(img_path, outdirPath)
