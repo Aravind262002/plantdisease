@@ -1,2 +1,5 @@
 venv
 __pycache__
+API.py
+auth.py
+serviceKey.json
